@@ -41,9 +41,9 @@ repositories {
 ext['hibernate.version'] = '5.1.3.Final'
 
 
-configurations {
-	compile.exclude module: 'spring-boot-starter-tomcat'// исключаем Tomcat, т.к. мы используем GlassFish
-}
+//configurations {
+//	compile.exclude module: 'spring-boot-starter-tomcat'// исключаем Tomcat, т.к. мы используем GlassFish
+//}
 
 dependencies {
 
@@ -57,8 +57,8 @@ dependencies {
 	compile 'org.projectlombok:lombok:+'// исключает "лишний" код (гетеры сетеры и пр.)
 	compile 'com.google.guava:guava:+'// утилиты по разным направлениям Java
 
-	compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.13'
-	compileOnly 'javax:javaee-api:7.0' // в GlassFish (Payara) уже есть эта библиотека, поэтому добавляем только для компиляции
+	compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.5'
+	compileOnly 'javax:javaee-api:8.0' // в GlassFish (Payara) уже есть эта библиотека, поэтому добавляем только для компиляции
 
 
 
